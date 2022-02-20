@@ -1,0 +1,17 @@
+name: 'Docker Build'
+description: 'Build docker image'
+inputs:
+  name:
+    description: 'Docker image name - for saving the image in artifacts'
+    required: true
+  context:
+    description: 'Docker context'
+    required: true
+    default: '.'
+  dockerfile:
+    description: 'Path to Dockerfile'
+    required: true
+    default: 'Dockerfile'
+runs:
+  using: 'node16'
+  main: 'index.js'
