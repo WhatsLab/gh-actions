@@ -1,0 +1,13 @@
+name: 'Docker Release'
+description: 'Release docker image'
+inputs:
+  name:
+    description: 'Docker image name - for loading from artifacts'
+    required: true
+  tags:
+    description: 'Docker image tags'
+    required: true
+    default: 'latest'
+runs:
+  using: 'node16'
+  main: 'index.js'
