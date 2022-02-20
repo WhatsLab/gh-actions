@@ -6,7 +6,7 @@ const parser = require('action-input-parser');
 const command = require('../../lib/command');
 
 async function buildImage(dockerfile, context, tags) {
-  return exec(
+  return command.exec(
     'docker',
     'build',
     ...command.args.map(tags, tag => ['-t ', tag]),
