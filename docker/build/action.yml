@@ -12,6 +12,10 @@ inputs:
     description: 'Path to Dockerfile'
     required: true
     default: 'Dockerfile'
+  build-args:
+    description: 'Image build arguments'
+    required: false
+    default: ''
 runs:
   using: 'node16'
   main: 'index.js'
